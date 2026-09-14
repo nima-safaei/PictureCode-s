@@ -1,17 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+<link rel="stylesheet" href="node_modules\vazirmatn\misc\Farsi-Digits\Vazirmatn-FD-font-face.css">
 
 <head>
     <style>
         * {
             padding: 0;
             margin: 0;
+            font-family: vazirmatn fd;
+            font-style: normal;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        main {
+            background-color: rgb(235, 235, 226);
         }
 
         table {
             width: 80%;
-            margin: 20px auto;
+            margin: 20px auto 0px auto;
             border-collapse: collapse;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -22,14 +32,22 @@
             background-color: rgb(241, 168, 11);
             color: aliceblue;
             font-size: 25px;
+
         }
 
+        thead>tr {
+            background-color: rgb(210, 211, 223);
+            padding: 10px;
+        }
 
 
         a {
             text-decoration: none;
+            color: #337ab7
         }
-
+        tr{
+            border: 5px solid #e8e8e8;
+        }
         th,
         td {
 
@@ -42,45 +60,100 @@
         }
 
         tr:nth-child(even) {
-            background-color: rgb(206, 201, 201);
+            background-color: rgb(210, 211, 223);
+            
 
 
         }
-       
 
-        div#pagination {
+        tbody>tr:nth-child(odd) {
+            background-color: rgb(252, 252, 252);
+        }
+
+
+        #pagination-container {
+            margin: 0px auto;
             width: 80%;
-            margin: 20px auto;
+            /* margin: 20px auto; */
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 5px;
+            flex: 1;
+            right: 50px;
+            background-color: rgb(210, 211, 223);
 
+        }
+
+
+
+        div#pagination {
+            width: 80%;
+            margin: 15px auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            flex: 1;
+            right: 50px;
+            background-color: rgb(210, 211, 223);
+            height: 20px;
+            width: 20px;
+            text-align: center;
 
         }
 
         div {
-            background-color: rgb(206, 201, 201);
-          
-        }
+            background-color: rgb(210, 211, 223);
+            text-align: center;
+            display: block;
+            flex: 1;
+            margin: 0.4px;
+            max-width: 500px;
 
+        }
+        tbody>tr>th{
+          color: rgb(167, 231, 71);
+        }
         div>a {
             margin: 3px;
             background-color: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            display: inline-table;
+            display: inline-block;
             padding: 8px;
             justify-content: center;
             flex: 1;
             align-items: center;
+            flex-direction: column;
+            font-size: 15px;
+            position: relative;
+            padding: 10px;
+
+
+
         }
 
         div>a:hover {
             background-color: rgb(241, 168, 11);
             color: white;
             transition: .2s;
+            border: black solid 2px;
+        }
+        #GG{
+            background-color: rgb(241, 168, 11);
+            color: white;
+        }
+
+        div>i {
+            background-color: rgb(255, 255, 255);
+        }
+
+        @media(max-width:500px) {
+            table {
+                width: 100%;
+            }
         }
     </style>
     <meta charset="UTF-8">
@@ -89,127 +162,158 @@
 </head>
 
 <body>
-    <table>
+    <main>
 
-        <caption>فهرست فایل های دستور عمل </caption>
+        <table>
 
-
-        <thead>
-            <tr>
-                <th scope="col">ردیف </th>
-                <th></th>
-                <th scope="col">عنوان</th>
-                <th scope="col">نوع فایل</th>
-                <th scope="col">دریافت فایل</th>
+            <caption>فهرست فایل های دستور عمل </caption>
 
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">1</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+            <thead>
+                <tr>
+                    <th scope="col">ردیف </th>
+                    <th></th>
+                    <th scope="col">عنوان</th>
+                    <th scope="col">نوع فایل</th>
+                    <th scope="col">دریافت فایل</th>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr>
-                <td scope="row">2</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr>
-                <td scope="row">3</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td><i class="fa-regular fa-file-pdf"></i></td>
+                    <td><a href="">فصل اول</a></td>
+                    <td> pdf</td>
+                    <td><a href=""> دریافت فایل</a> </td>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr>
-                <td scope="row">4</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr>
-                <td scope="row">5</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td><i class="fa-regular fa-file-pdf"></i></td>
+                    <td><a href="">فصل دوم </a></td>
+                    <td> pdf</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td><i class="fa-regular fa-file-pdf"></i></td>
+                    <td><a href="">فصل سوم</a></td>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr >
-                <td scope="row">6</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+                    <td> pdf</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">4</td>
+                    <td><i class="fa-regular fa-file-pdf"></i></td>
+                    <td><a href="">فصل چهارم</a></td>
+                    <td> excel</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">5</td>
+                    <td><i class="fa-regular fa-file-pdf"></i></td>
+                    <td><a href="">فصل چهارم</a></td>
+                    <td> pdf</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">6</td>
+                    <th class="Excel"><i class="fa-solid fa-file-excel"></i></th>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr>
-                <td scope="row">7</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+                    <td><a href="">فصل ششم</a></td>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr >
-                <td scope="row">8</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+                    <td> excel</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">7</td>
+                    <th class="Excel"><i class="fa-solid fa-file-excel"></i></th>
+                    <td><a href="">گزیده اماری استانها</a></td>
+                    <td> pdf</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">8</td>
+                    <th class="Excel"><i class="fa-solid fa-file-excel"></i></th>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr>
-                <td scope="row">9</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+                    <td><a href=""> مقدمه</a></td>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
-            <tr>
-                <td scope="row">10</td>
-                <td><i class="fa-regular fa-file-pdf"></i></td>
-                <td><a href="">Lorem ipsum dolor sit </a></td>
+                    <td> excel</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">9</td>
+                    <td><i class="fa-regular fa-file-pdf"></i></td>
+                    <td><a href=""> تعاریف و مفاهیم </a> </td>
 
-                <td> pdf</td>
-                <td><a href=""> دریافت فایل</a> </td>
-            </tr>
+                    <td> pdf</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
+                <tr>
+                    <td scope="row">10</td>
+                    <td><i class="fa-regular fa-file-pdf"></i></td>
+                    <td><a href="">خلاصه امار مدیریتی</a></td>
 
-        </tbody>
-    </table>
+                    <td> pdf</td>
+                    <td><a href=""> دریافت فایل</a> </td>
+                </tr>
 
-    <div id="pagination">
-        <div>
-            <div>  <a href=""><i class="fa-solid fa-angles-right"></i></a></div>
-        </div>
-      
-        <div><a href=""><i class="fa-solid fa-angle-right"></i></a></a></div>
-       <div> <a href="">1</a></div>
-       <div> <a href="">2</a></div>
-       <div> <a href="">3</a></div>
-       <div> <a href="">4</a></div>
-       <div> <a href=""> 5</a></div>
-       <div> <a href=""> 6</a></div>
-       <div> <a href="">7</a></div>
-       <div> <a href="">8</a></div>
-       <div> <a href=""> 9 </a></div>
-       <div> <a href="">10</a></div>
-       <div><a href=""><i class="fa-solid fa-angle-left"></i></a></div> 
-       <div> <a href=""><i class="fa-solid fa-angles-left"></i></a></div>
+            </tbody>
+        </table>
+        <section id="pagination-container">
+            <div id="pagination">
+                <div>
+                    <div > <a href="#"><i class="fa-solid fa-angles-right"></i></a></div>
+                </div>
+                <div>
+                    <div><a href="#"><i class="fa-solid fa-angle-right"></i></a></a></div>
+                </div>
+                <div>
+                    <div > <a href="#"id="GG">1</a></div>
+                </div>
+                <div>
+                    <div> <a href="#">2</a></div>
+                </div>
+                <div>
+                    <div> <a href="#">3</a></div>
+                </div>
+                <div>
+                    <div> <a href="#">4</a></div>
+                </div>
+                <div>
+                    <div> <a href="#"> 5</a></div>
+                </div>
+                <div>
+                    <div> <a href="#"> 6</a></div>
+                </div>
+                <div>
+                    <div> <a href="#">7</a></div>
+                </div>
+                <div>
+                    <div> <a href="#">8</a></div>
+                </div>
+                <div>
+                    <div> <a href="#"> 9 </a></div>
+                </div>
+                <div>
+                    <div> <a href="#">10</a></div>
+                </div>
+                <div>
+                    <div><a href=""#><i class="fa-solid fa-angle-left"></i></a></div>
+                </div>
+                <div>
+                    <div> <a href="#"><i class="fa-solid fa-angles-left"></i></a></div>
+                </div>
 
-    </div>
+
+            </div>
+        </section>
+
+
+    </main>
 </body>
 
 
